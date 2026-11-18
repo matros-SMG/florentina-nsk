@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Флорентина · цветочный магазин в Новосибирске</title>
+<meta name="description" content="Свежие букеты в Новосибирске: розы, пионы, эустома. Магазин на Нарымской, 19, ежедневно 9:00-21:00. Рейтинг 4,9 на Яндекс.Картах, 27 отзывов.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Флорентина">
+<meta property="og:title" content="Флорентина: свежие букеты в Новосибирске">
+<meta property="og:description" content="Цветочный магазин на Нарымской, 19: розы, пионы, эустома. Рейтинг 4,9 на Яндекс.Картах, ежедневно 9:00-21:00.">
+<meta property="og:url" content="https://matros-smg.github.io/florentina-nsk/">
+<meta property="og:image" content="https://matros-smg.github.io/florentina-nsk/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%232f6b4d%27/%3E%3Cpath d=%27M16 26c0-8 3-13 10-16-1 8-4 13-10 16z%27 fill=%27%23f8f1ed%27/%3E%3Cpath d=%27M16 26c0-6-2-10-7-12 1 6 3 10 7 12z%27 fill=%27%23f8f1ed%27 opacity=%27.6%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Florist","name":"Флорентина","description":"Цветочный магазин в Новосибирске: розы, пионы, эустома, букеты.","url":"https://matros-smg.github.io/florentina-nsk/","image":"https://matros-smg.github.io/florentina-nsk/assets/og.jpg","telephone":"+7 (383) 220-12-05","openingHours":"Mo-Su 09:00-21:00","address":{"@type":"PostalAddress","streetAddress":"Нарымская ул., 19, этаж 1","addressLocality":"Новосибирск","addressCountry":"RU"}}
+</script>
+<style>
+  /* ---- тема: шесть цветов, два шрифта (палитра А "пудра + лес", светлая) ---- */
+  .v-page {
+    --v-canvas: #f8f1ed; --v-surface: #fffaf8;
+    --v-ink: #1d2a22; --v-ink-soft: #5a675f;          /* 5,3:1 на холсте */
+    --v-accent: #2f6b4d; --v-accent-ink: #f8f3ef;     /* 5,6:1 на холсте, 5,7:1 текст на кнопке */
+    --v-font-display: "Tenor Sans", "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+    --v-font-text: "Onest", "Segoe UI", system-ui, sans-serif;
+    --v-shadow-color: 74 44 40;
+    /* светлый холст: тени легче, кромка карточек световая, а не тёмная */
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .08), 0 8px 22px rgb(var(--v-shadow-color) / .10);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .10), 0 22px 54px rgb(var(--v-shadow-color) / .16);
+    --v-edge: inset 0 1px 0 rgb(255 255 255 / .7);
+    --v-radius: 12px;
+    --v-star: #f1ab14;
+    --v-section: clamp(3.5rem, 8vw, 7rem);
+    --v-display-weight: 400;
+    --v-track-tight: -0.008em;
+    --v-track-normal: 0;
+  }
+  html, body { background: #f8f1ed; }
+  .v-page .v-display { font-weight: 400; }
+  .v-page .v-display--xl { line-height: 1.02; }
+  .v-page .v-lede { font-weight: 400; line-height: 1.45; }
+  .v-page .v-label { font-weight: 500; }
+  .v-page .v-btn { font-size: var(--v-t-base); font-weight: 600; }
+  .v-page [id] { scroll-margin-top: 5rem; }
+
+  /* ---- шапка: прозрачная на первом экране, плотная после ------------------- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between;
+    padding: var(--v-3) var(--v-gutter); gap: var(--v-4);
+    background: linear-gradient(to bottom, rgb(248 241 237 / .85), rgb(248 241 237 / 0));
+    transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(248 241 237 / .88); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__mark { font-family: var(--v-font-display); font-size: var(--v-t-lg); letter-spacing: .02em; text-decoration: none;
+    display: inline-flex; align-items: center; gap: .45em; min-height: 44px; white-space: nowrap; }
+  .bar__mark i { width: .62em; height: .92em; border-radius: 100% 0 100% 0; background: var(--v-accent); display: inline-block; transform: rotate(-24deg); }
+  .bar__right { display: flex; align-items: center; gap: var(--v-4); }
+  .bar__tel { text-decoration: none; font-weight: 500; font-size: var(--v-t-sm); color: var(--v-ink); display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--v-2); }
+  @media (max-width: 700px) {
+    .bar__tel { display: none; }
+    .bar .v-btn { padding: 0 1em; min-height: 44px; font-size: .9rem; }
+    .bar__right { gap: var(--v-2); }
+    .bar__mark { font-size: 1.15rem; }
+  }
+  @media (max-width: 860px) { .bar.is-scrolled { background: rgb(248 241 237 / .94); } }
+
+  /* ---- hero: букет в светлой студии, два плана ------------------------------- */
+  /* img внутри <picture>: селектор движка .v-layer > img не достаёт, позиционируем сами */
+  .hero__back img { position: absolute; max-width: none; width: 112%; height: 112%; left: -6%; top: -6%; object-fit: cover; object-position: 50% 50%; }
+  /* светлый скрим цвета холста под текст: угол на компьютере, полоса на телефоне */
+  .hero__scrim { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: radial-gradient(120% 95% at 0% 100%, rgb(248 241 237 / .92) 0%, rgb(248 241 237 / .6) 38%, transparent 70%); }
+  .hero__floor { position: absolute; inset: auto 0 0 0; height: 26%; z-index: 2; pointer-events: none;
+    background: linear-gradient(to top, var(--v-canvas) 0%, rgb(248 241 237 / .5) 45%, transparent 100%); }
+  .hero__copy { bottom: clamp(5rem, 14vh, 9rem); max-width: min(46rem, 86vw); }
+  .hero__label { display: block; margin-bottom: var(--v-4); color: var(--v-accent); }
+  .hero__copy .v-display { font-size: clamp(2.2rem, 1rem + 2.6vw, 3.5rem); max-width: 21ch; }
+  .hero__copy .v-lede { margin-top: var(--v-5); color: var(--v-ink); max-width: 38ch; }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-6); margin-top: var(--v-6); }
+  .hero__tel { text-decoration: none; color: var(--v-ink); font-size: var(--v-t-sm); display: inline-flex; align-items: center; min-height: 44px; gap: .35em; }
+  .hero__tel b { font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+  @media (max-height: 760px) and (min-width: 861px) { .hero__copy .v-display { font-size: var(--v-t-2xl); } .hero__copy { bottom: clamp(3.5rem, 10vh, 6rem); } }
+  @media (max-width: 860px) {
+    .hero__back img { object-position: 50% 100%; }
+    .hero__scrim { background: linear-gradient(to bottom, rgb(248 241 237 / .95) 0%, rgb(248 241 237 / .9) 50%, transparent 74%); }
+    .hero__floor { height: 14%; }
+    .hero__copy { top: clamp(5.5rem, 11vh, 7rem); bottom: auto; max-width: none; }
+    .hero__copy .v-display { font-size: var(--v-t-2xl); max-width: none; }
+    .hero__copy .v-lede { font-size: var(--v-t-base); margin-top: var(--v-4); }
+    .hero__label { margin-bottom: var(--v-3); }
+    .hero__cta { margin-top: var(--v-5); gap: var(--v-2) var(--v-5); }
+  }
+
+  /* ---- фирменный ход 1: букет собирается веером ------------------------------ */
+  .sb { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr auto; column-gap: var(--v-8); height: 100%;
+    padding: clamp(4.5rem, 12vh, 7rem) var(--v-gutter) clamp(2.5rem, 8vh, 5rem); }
+  .sb__head { grid-column: 1; max-width: 34rem; }
+  .sb__head .v-label { display: block; margin-bottom: var(--v-3); color: var(--v-accent); }
+  .sb__rep { grid-column: 1; grid-row: 2; position: relative; align-self: center; min-height: 12rem; }
+  .sb__rep > div { position: absolute; left: 0; top: 0; max-width: 32rem; }
+  .sb__step { display: inline-flex; align-items: center; gap: .55em; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); font-weight: 500; margin-bottom: var(--v-3); }
+  .sb__step i { width: .6em; height: .6em; border-radius: 50%; background: var(--v-accent); }
+  .sb__rep h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-2xl); line-height: 1.05; letter-spacing: 0; text-wrap: balance; margin-bottom: var(--v-3); }
+  .sb__rep p { color: var(--v-ink-soft); max-width: 44ch; text-wrap: pretty; }
+  .sb__rep p b { color: var(--v-ink); font-weight: 500; }
+  .sb__after { grid-column: 1; grid-row: 3; display: flex; align-items: center; gap: var(--v-5); flex-wrap: wrap; }
+  .sb__hint { font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 34ch; }
+  .fan { grid-column: 2; grid-row: 1 / -1; position: relative; align-self: center; justify-self: center; width: min(100%, 66vh); aspect-ratio: 1 / 1; }
+  /* карточка: угол a0 в стопке → a1 в веере, сдвиг tx - чтобы цветы задних карточек не прятались за передней;
+     k - доля раскрытия своей карточки; w - выход готового букета. Ось вращения далеко под карточкой (250 %): веер идёт дугой, низ карточек расходится */
+  .fan__card { --k: clamp(0, calc((var(--v-p, 0) - var(--s)) / .3), 1); --w: clamp(0, calc((var(--v-p, 0) - .58) / .24), 1);
+    position: absolute; left: 27%; bottom: 6%; width: 46%; aspect-ratio: 3 / 4; transform-origin: 50% 250%; /* left = (100 − 46) / 2: у figure margin обнулён движком, центрируем через left */
+    border-radius: var(--v-radius); overflow: hidden; background: var(--v-surface); box-shadow: 0 24px 48px rgb(74 44 40 / .18), var(--v-edge);
+    transform: translateX(calc(var(--k) * var(--tx))) rotate(calc(var(--a0) * (1 - var(--k)) + var(--a1) * var(--k))) translateY(calc(var(--k) * -6% + var(--w) * 5%));
+    opacity: calc(1 - .6 * var(--w)); will-change: transform, opacity; }
+  .fan__card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .fan__card figcaption { position: absolute; left: var(--v-4); right: var(--v-4); bottom: var(--v-4); font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink);
+    opacity: calc(var(--k) * (1 - var(--w))); text-shadow: 0 1px 8px rgb(255 250 248 / .9), 0 0 2px rgb(255 250 248 / .9); }
+  .fan__card--1 { --s: .04; --a0: 0deg; --a1: -8deg; --tx: -30%; z-index: 3; }
+  .fan__card--2 { --s: .14; --a0: 1deg; --a1: 0deg; --tx: 0%; z-index: 2; }
+  .fan__card--3 { --s: .24; --a0: -1deg; --a1: 8deg; --tx: 30%; z-index: 1; }
+  .fan__card--wrap { --k: 1; z-index: 4; transform-origin: 50% 50%; transform: translateY(calc((1 - var(--w)) * 14%)) scale(calc(.92 + .08 * var(--w))); opacity: var(--w); }
+  .fan__card--wrap figcaption { opacity: var(--w); }
+  .fan__legend { position: absolute; left: 0; right: 0; bottom: -1.6rem; text-align: center; font-size: var(--v-t-xs); color: var(--v-ink-soft); letter-spacing: var(--v-track-wide); text-transform: uppercase; }
+  @media (max-width: 1100px) { .sb { column-gap: var(--v-6); } .sb__rep h3 { font-size: var(--v-t-xl); } }
+  @media (max-width: 860px) {
+    .sb { grid-template-columns: 1fr; grid-template-rows: auto auto 1fr auto; row-gap: var(--v-3); padding: clamp(4.5rem, 11vh, 6rem) var(--v-gutter) clamp(1.5rem, 5vh, 3rem); }
+    .sb__head { max-width: none; }
+    .sb__head .v-label { display: none; }
+    .sb__head .v-display { font-size: var(--v-t-xl); }
+    .fan { grid-column: 1; grid-row: 2; width: min(100%, 40vh); aspect-ratio: 4 / 3; align-self: start; }
+    .fan__card { bottom: 0; }
+    .fan__card--1 { --a1: -6deg; --tx: -24%; } .fan__card--3 { --a1: 6deg; --tx: 24%; }
+    .fan__card figcaption { display: none; }
+    .fan__legend { display: none; }
+    .sb__rep { grid-row: 3; align-self: start; min-height: 9rem; }
+    .sb__rep h3 { font-size: var(--v-t-lg); margin-bottom: var(--v-2); }
+    .sb__rep p { font-size: var(--v-t-sm); }
+    .sb__after { grid-row: 4; }
+    .sb__hint { display: none; }
+  }
+  @media (max-width: 600px) and (max-height: 760px) { .fan { width: min(100%, 34vh); } .sb__after { display: none; } }
+
+  /* ---- сколько стоит: три формата строками, условия рядом --------------------- */
+  .price { display: grid; grid-template-columns: .8fr 1.4fr; gap: var(--v-9); align-items: start; }
+  .price__head .v-body { color: var(--v-ink-soft); margin-top: var(--v-4); }
+  .price__rows li { display: grid; grid-template-columns: 1fr auto; gap: var(--v-2) var(--v-6); padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); align-items: start; }
+  .price__rows li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .price__rows h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); line-height: 1.12; letter-spacing: 0; }
+  .price__rows p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 44ch; }
+  .price__rows .sum { grid-column: 2; grid-row: 1 / span 2; font-family: var(--v-font-display); font-size: var(--v-t-xl); line-height: 1.1; color: var(--v-accent); text-align: right; white-space: nowrap; }
+  .price__rows .sum small { display: block; font-family: var(--v-font-text); font-weight: 500; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); margin-top: .35em; }
+  .price__terms { margin-top: var(--v-6); display: grid; gap: var(--v-3); }
+  .price__terms li { display: grid; grid-template-columns: 11rem 1fr; gap: var(--v-4); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .price__terms b { color: var(--v-ink); font-weight: 500; }
+  .price > * { min-width: 0; }
+  @media (max-width: 1000px) {
+    .price { grid-template-columns: 1fr; gap: var(--v-6); }
+    .price__rows li { grid-template-columns: 1fr; }
+    .price__rows .sum { grid-column: 1; grid-row: auto; text-align: left; white-space: normal; margin-top: var(--v-2); }
+    .price__terms li { grid-template-columns: 1fr; gap: var(--v-1); }
+  }
+
+  /* ---- фирменный ход 2: часы доставки ----------------------------------------- */
+  .kc__img img { width: 112%; height: 112%; left: -6%; top: -6%; object-fit: cover; object-position: 50% 50%; }
+  .kc__scrim { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: radial-gradient(115% 90% at 0% 0%, rgb(248 241 237 / .94) 0%, rgb(248 241 237 / .66) 40%, transparent 72%); }
+  .kc { position: absolute; inset: 0; z-index: 3; display: grid; grid-template-columns: 1.1fr .9fr; column-gap: var(--v-8); align-items: center;
+    padding: clamp(4.5rem, 12vh, 7rem) var(--v-gutter) clamp(2.5rem, 8vh, 5rem); }
+  .kc__copy { max-width: 36rem; }
+  .kc__copy .v-label { display: block; margin-bottom: var(--v-3); color: var(--v-accent); }
+  .kc__copy .v-display--lg { font-size: clamp(2rem, 1.3rem + 2.6vw, 3.6rem); margin-bottom: var(--v-6); }
+  .kc__rep { position: relative; min-height: 11rem; }
+  .kc__rep > div { position: absolute; left: 0; top: 0; max-width: 32rem; }
+  .kc__rep h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); line-height: 1.12; letter-spacing: 0; margin-bottom: var(--v-3); text-wrap: balance; }
+  .kc__rep p { color: var(--v-ink); opacity: .9; max-width: 42ch; text-wrap: pretty; }
+  .clock { position: relative; justify-self: start; align-self: center; margin: -20vh 0 0 1vw; width: min(100%, 33vh, 300px); aspect-ratio: 1 / 1; border-radius: 50%;
+    background: rgb(248 241 237 / .55); box-shadow: inset 0 0 0 2px var(--v-hair-strong), var(--v-e2); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  .clock__tick { position: absolute; left: 50%; top: 4%; width: 2px; height: 5%; margin-left: -1px; background: var(--v-hair-strong); transform-origin: 50% 920%; transform: rotate(var(--deg)); }
+  .clock__tick--big { background: var(--v-ink); height: 7%; transform-origin: 50% 657%; }
+  .clock__mark { position: absolute; inset: 0; transform: rotate(var(--deg)); pointer-events: none; }
+  .clock__mark i { position: absolute; left: 50%; top: 7.5%; width: .9rem; height: .9rem; margin-left: -.45rem; border-radius: 50%;
+    background: var(--v-accent); box-shadow: 0 0 0 0 rgb(47 107 77 / .45); transform: scale(calc(.55 + .45 * var(--on))); opacity: calc(.4 + .6 * var(--on)); }
+  .clock__mark b { position: absolute; left: 50%; top: -2.4rem; padding: .05rem .45rem; border-radius: 1rem; background: rgb(248 241 237 / .88); transform: translateX(-50%) rotate(calc(-1 * var(--deg))); font-family: var(--v-font-text); font-weight: 500; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; white-space: nowrap;
+    color: var(--v-ink); opacity: calc(.55 + .45 * var(--on)); }
+  .clock__mark--photo { --deg: 270deg; --on: 1; }
+  .clock__mark--door { --deg: 270deg; --on: clamp(0, calc((var(--v-p, 0) - .92) * 14), 1); }
+  .clock__mark--door b { top: 1.5rem; }
+  .clock__hand { position: absolute; left: 50%; bottom: 50%; transform-origin: 50% 100%; border-radius: 999px; }
+  .clock__hand--h { width: 5px; height: 30%; margin-left: -2.5px; background: var(--v-ink); transform: rotate(calc(270deg + var(--v-p, 0) * 360deg)); }
+  .clock__hand--m { width: 3px; height: 42%; margin-left: -1.5px; background: var(--v-accent); transform: rotate(calc(var(--v-p, 0) * 4320deg)); }
+  .clock__pin { position: absolute; left: 50%; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: var(--v-ink); box-shadow: 0 0 0 3px var(--v-canvas); }
+  .clock__num { position: absolute; font-family: var(--v-font-display); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .clock__num--12 { left: 50%; top: 15%; transform: translateX(-50%); }
+  .clock__num--3 { right: 15%; top: 50%; transform: translateY(-50%); }
+  .clock__num--6 { left: 50%; bottom: 15%; transform: translateX(-50%); }
+  .kc__legend { position: absolute; left: 0; right: 0; bottom: auto; top: -3.4rem; text-align: center; white-space: normal; text-wrap: balance; line-height: 1.5; font-size: var(--v-t-xs); color: var(--v-ink-soft); letter-spacing: var(--v-track-wide); text-transform: uppercase; }
+  @media (max-width: 1100px) and (min-width: 861px) { .clock { margin-left: 0; } }
+  @media (max-width: 860px) {
+    .kc__scrim { background: linear-gradient(to bottom, rgb(248 241 237 / .96) 0%, rgb(248 241 237 / .86) 46%, rgb(248 241 237 / .3) 78%, transparent 100%); }
+    .kc { grid-template-columns: 1fr; grid-template-rows: auto 1fr; /* текст сверху, часы внизу на букете */ row-gap: var(--v-4); align-items: start; padding: clamp(4.5rem, 11vh, 6rem) var(--v-gutter) clamp(1.5rem, 5vh, 3rem); }
+    .kc__copy { max-width: none; grid-row: 1; }
+    .kc__copy .v-label { display: none; }
+    .kc__copy .v-display--lg { font-size: var(--v-t-xl); margin-bottom: var(--v-4); }
+    .kc__rep { min-height: 9rem; }
+    .kc__rep h3 { font-size: var(--v-t-lg); margin-bottom: var(--v-2); }
+    .kc__rep p { font-size: var(--v-t-sm); }
+    .clock { grid-row: 2; width: min(54vw, 30vh); justify-self: center; align-self: end; margin: 0 14vw 3vh 0; }
+    .clock__mark i { top: -.45rem; } /* точка на ободе, чтобы не упиралась в цифру 3 */
+    .clock__mark b { top: -2.1rem; font-size: .95rem; }
+    .kc__legend { display: none; }
+    .clock__num { font-size: .95rem; }
+  }
+  @media (max-width: 600px) and (max-height: 700px) { .clock { width: min(46vw, 26vh); } }
+
+  /* ---- отзывы с Яндекс.Карт: слоты под настоящие ------------------------------- */
+  .reviews__head { display: flex; flex-wrap: wrap; gap: var(--v-6); align-items: end; justify-content: space-between; margin-bottom: var(--v-7); }
+  .reviews__rating { display: flex; align-items: center; gap: var(--v-3); font-size: var(--v-t-sm); flex-wrap: wrap; }
+  .reviews__rating a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--v-2); }
+  .reviews__num { font-family: var(--v-font-display); font-size: var(--v-t-2xl); line-height: 1; color: var(--v-accent); }
+  .reviews__stars { --size: 1.1rem; display: inline-block; width: calc(var(--size) * 5); height: var(--size);
+    background: linear-gradient(90deg, var(--v-star) calc(var(--r, 0) / 5 * 100%), #e3d6cf 0);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z'/%3E%3C/svg%3E") 0 0 / var(--size) var(--size) repeat-x;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z'/%3E%3C/svg%3E") 0 0 / var(--size) var(--size) repeat-x; }
+  .reviews__stars--sm { --size: .8rem; vertical-align: middle; }
+  .reviews__list { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--v-6); align-items: start; }
+  .reviews__item { padding-top: var(--v-5); border-top: 1px solid var(--v-hair); }
+  .reviews__item--big .reviews__text { font-family: var(--v-font-display); font-size: var(--v-t-xl); line-height: 1.3; }
+  .reviews__text { text-wrap: pretty; }
+  .reviews__meta { margin-top: var(--v-4); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .reviews__meta b { color: var(--v-ink); font-weight: 500; }
+  .reviews__fact { margin-top: var(--v-7); padding-top: var(--v-5); border-top: 1px solid var(--v-hair); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  @media (max-width: 860px) { .reviews__list { grid-template-columns: 1fr; } }
+
+  /* ---- финал: одно сообщение ----------------------------------------------------- */
+  .close { min-height: 86svh; display: grid; grid-template-rows: 1fr auto; padding: clamp(6rem, 14vh, 9rem) var(--v-gutter) 2.5rem;
+    background: radial-gradient(60rem 40rem at calc(var(--v-mx, .5) * 100%) calc(var(--v-my, .5) * 100%), rgb(47 107 77 / .10), transparent 60%); }
+  .close__inner { align-self: center; display: grid; grid-template-columns: 1.25fr .75fr; gap: var(--v-9); align-items: start; padding-bottom: var(--v-9); }
+  .close__inner .v-display { margin-bottom: var(--v-5); }
+  .close__inner .v-lede { max-width: 40ch; }
+  .close__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-6); margin-top: var(--v-6); }
+  .close__tel { font-family: var(--v-font-display); font-size: var(--v-t-xl); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; color: var(--v-ink); letter-spacing: .01em; }
+  .close__hint { margin-top: var(--v-4); font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 44ch; }
+  .close__meta { display: grid; gap: var(--v-3); color: var(--v-ink-soft); padding-top: var(--v-2); }
+  .close__meta b { color: var(--v-ink); font-weight: 500; display: block; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; margin-bottom: .2em; }
+  .foot { display: flex; justify-content: space-between; gap: var(--v-4); padding: var(--v-6) 0 0; border-top: 1px solid var(--v-hair); font-size: var(--v-t-xs); color: var(--v-ink-soft); flex-wrap: wrap; }
+  @media (max-width: 860px) {
+    .close { min-height: 0; padding: clamp(5rem, 12vh, 7rem) var(--v-gutter) calc(2.5rem + env(safe-area-inset-bottom)); }
+    .close__inner { grid-template-columns: 1fr; gap: var(--v-7); padding-bottom: var(--v-8); }
+    .close__tel { font-size: var(--v-t-lg); }
+    .foot__more { display: none; }
+  }
+  /* телефон: текст не мельче 15 px (--v-t-sm на 390 px = 14 px); блок в конце, чтобы не перебивался правилами компонентов */
+  @media (max-width: 860px) {
+    .hero__tel, .sb__rep p, .sb__hint, .price__rows p, .price__terms li, .kc__rep p,
+    .reviews__meta, .reviews__rating, .reviews__fact, .close__hint, .close__meta, .foot { font-size: .95rem; }
+    .bar .v-btn { font-size: .95rem; }
+    .v-label, .sb__step, .close__meta b, .price__rows .sum small { font-size: .95rem; }
+  }
+
+  /* ---- Флорентина: цитата на главном фото, рейтинг, галерея, лупа, плашка ---- */
+  .hero__quote { --w: clamp(230px, 19vw, 290px); }
+  .quote { position: absolute; right: clamp(1.25rem, 3.5vw, 4.5rem); top: clamp(5.5rem, 12vh, 8rem); width: var(--w); padding: var(--v-4) var(--v-4) var(--v-3);
+    border-radius: var(--v-radius); background: var(--v-surface); box-shadow: 0 26px 56px rgb(74 44 40 / .2), var(--v-edge); transform: rotate(2deg); font-size: .9rem; line-height: 1.4; color: var(--v-ink); }
+  .quote p { font-family: var(--v-font-display); font-size: 1.08rem; line-height: 1.3; margin: .45rem 0 .6rem; text-wrap: pretty; }
+  .quote small { display: block; font-size: .78rem; color: var(--v-ink-soft); }
+  .quote small b { color: var(--v-ink); font-weight: 500; }
+  .hero__rate { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .8rem; margin-top: var(--v-5); font-size: var(--v-t-sm); }
+  .hero__rate b { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); line-height: 1; }
+  .hero__rate a { color: var(--v-ink); text-underline-offset: .18em; }
+  .hero__rate .reviews__stars { --size: 1.15rem; }
+  @media (max-height: 760px) and (min-width: 861px) { .quote { top: 5rem; } }
+  @media (max-width: 860px) {
+    .quote { top: auto; right: 4vw; bottom: 3.5vh; width: min(68vw, 290px); padding: .7rem .8rem .6rem; transform: rotate(-2deg); box-shadow: 0 16px 36px rgb(74 44 40 / .28), var(--v-edge); }
+    .quote p { font-size: 1rem; margin: .3rem 0 .4rem; }
+    .quote small { font-size: .8rem; }
+    .hero__rate { margin-top: var(--v-4); }
+  }
+
+  .works__head { max-width: 46rem; margin-bottom: var(--v-7); }
+  .works__head .v-body { color: var(--v-ink-soft); margin-top: var(--v-4); }
+  .works { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--v-4); }
+  .work { position: relative; margin: 0; cursor: zoom-in; border-radius: var(--v-radius); overflow: hidden; background: var(--v-surface); box-shadow: var(--v-e1), var(--v-edge); aspect-ratio: 3 / 4; outline-offset: 3px; }
+  .work img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 72%; display: block; transition: transform .5s var(--v-ease-out); }
+  .work:hover img, .work:focus-visible img { transform: scale(1.04); }
+  .work figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.2rem var(--v-3) var(--v-3); font-size: var(--v-t-xs); line-height: 1.3; color: var(--v-ink); background: linear-gradient(to top, rgb(248 241 237 / .94), rgb(248 241 237 / 0)); }
+  .work__zoom { position: absolute; top: .6rem; right: .6rem; width: 2.25rem; height: 2.25rem; display: grid; place-items: center; border-radius: 50%; background: rgb(255 250 248 / .92); color: var(--v-ink); box-shadow: 0 2px 10px rgb(74 44 40 / .18); }
+  @media (max-width: 1000px) { .works { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 640px) { .works { grid-template-columns: repeat(2, 1fr); gap: var(--v-3); } .work figcaption { font-size: .85rem; padding-top: 1.6rem; } }
+
+  .lb { position: fixed; inset: 0; z-index: 100; display: none; background: rgb(29 22 20 / .88); }
+  .lb.is-open { display: block; }
+  .lb__scroll { position: absolute; inset: 0; overflow: auto; display: grid; place-items: center; padding: 3.5rem 1rem 4.5rem; -webkit-overflow-scrolling: touch; }
+  .lb__scroll.is-zoom { place-items: start; }
+  .lb__img { display: block; width: auto; max-width: min(92vw, 1000px); max-height: calc(100svh - 8rem); border-radius: 10px; cursor: zoom-in; box-shadow: 0 30px 80px rgb(0 0 0 / .4); background: #fff; }
+  .lb__scroll.is-zoom .lb__img { max-width: none; max-height: none; cursor: zoom-out; }
+  .lb__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 1rem 4.5rem; text-align: center; color: #f8f1ed; font-size: .95rem; pointer-events: none; text-wrap: balance; }
+  .lb__btn { position: absolute; z-index: 2; width: 48px; height: 48px; border: 0; border-radius: 50%; background: rgb(255 250 248 / .94); color: #1d2a22; display: grid; place-items: center; cursor: pointer; font: inherit; box-shadow: 0 4px 16px rgb(0 0 0 / .3); }
+  .lb__btn:focus-visible { outline: 3px solid #f1ab14; outline-offset: 2px; }
+  .lb__close { top: .8rem; right: .8rem; }
+  .lb__prev { left: .8rem; top: 50%; margin-top: -24px; }
+  .lb__next { right: .8rem; top: 50%; margin-top: -24px; }
+  @media (max-width: 640px) { .lb__prev, .lb__next { top: auto; bottom: .7rem; margin: 0; } .lb__cap { padding: 1rem 4.5rem 1.1rem; } }
+  .demo-badge { position: fixed; left: .75rem; bottom: .75rem; z-index: 60; padding: .3rem .7rem; border-radius: 999px; background: #1d2a22; color: #f8f3ef; font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; pointer-events: none; box-shadow: 0 4px 14px rgb(0 0 0 / .25); }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+  <div class="v-grain" aria-hidden="true"></div>
+  <span class="demo-badge">Демо</span>
+
+  <header class="bar">
+    <a class="bar__mark" href="#top"><i aria-hidden="true"></i>Флорентина</a>
+    <nav class="bar__right" aria-label="Быстрые ссылки">
+      <a class="bar__tel" href="tel:+73832201205">+7 (383) 220-12-05</a>
+      <a class="v-btn" href="https://wa.me/79137922942?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%B1%D1%83%D0%BA%D0%B5%D1%82" target="_blank" rel="noopener">Заказать букет</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 1 · УЗНАВАНИЕ: букет на главном фото + отзыв-крючок -->
+    <section id="top" data-v-act="pin" data-v-span="2" data-v-drift="#f8f1ed" aria-label="Свежие букеты по Новосибирску">
+      <div data-v-stage>
+        <div class="v-layer hero__back" data-v-parallax="-0.5">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+            <img src="assets/hero.webp" alt="Букет из розовых кустовых роз в бумаге" width="1920" height="1080" fetchpriority="high">
+          </picture>
+        </div>
+        <div class="hero__scrim" aria-hidden="true"></div>
+        <div class="v-layer hero__quote" data-v-parallax="-0.2">
+          <figure class="quote" style="margin:0">
+            <span class="reviews__stars reviews__stars--sm" style="--r: 5" role="img" aria-label="оценка 5 из 5"></span>
+            <p>"Подарили белые розы, и они стоят как новенькие уже шестой день!"</p>
+            <small><b>wshsui</b> · 14 января 2026 · Яндекс.Карты</small>
+          </figure>
+        </div>
+        <div class="hero__floor" aria-hidden="true"></div>
+
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.86 0 0.12">
+          <span class="v-label hero__label">Цветочный магазин · Новосибирск</span>
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Свежие букеты по Новосибирску</h1>
+          <p class="v-lede">Розы, пионы, эустома и лизиантусы. Магазин на Нарымской, 19, открыт каждый день с 9:00 до 21:00.</p>
+          <div class="hero__rate">
+            <span class="reviews__stars" style="--r: 4.9" role="img" aria-label="рейтинг 4,9 из 5"></span><b class="v-nums">4,9</b>
+            <a href="https://yandex.com/maps/org/florentina/1288488816/" target="_blank" rel="noopener">27 отзывов на Яндекс.Картах</a>
+          </div>
+          <div class="hero__cta">
+            <a class="v-btn" href="https://wa.me/79137922942?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%B1%D1%83%D0%BA%D0%B5%D1%82" target="_blank" rel="noopener">Заказать букет</a>
+            <a class="hero__tel" href="tel:+73832201205">или позвоните <b>+7 (383) 220-12-05</b></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · ДОКАЗАТЕЛЬСТВО: фото с карточки, лупа -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f2e7e2" id="raboty" aria-label="Букеты с фото магазина">
+      <div class="v-wrap">
+        <div class="works__head" data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--lg">Так выглядят букеты</h2>
+          <p class="v-body">Фото с карточки магазина на Яндекс.Картах. Нажмите на фото, чтобы рассмотреть: второе нажатие приближает.</p>
+        </div>
+        <div class="works" data-v-in data-v-stagger="60"><figure class="work" tabindex="0" role="button" aria-label="Открыть фото: Розовые кустовые розы" data-full="assets/g/01.webp" data-cap="Розовые кустовые розы"><img src="assets/g/01-s.webp" alt="Розовые кустовые розы" width="520" height="693" loading="lazy" decoding="async"><span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span><figcaption>Розовые кустовые розы</figcaption></figure><figure class="work" tabindex="0" role="button" aria-label="Открыть фото: Букет с кустовыми розами и зеленью" data-full="assets/g/02.webp" data-cap="Букет с кустовыми розами и зеленью"><img src="assets/g/02-s.webp" alt="Букет с кустовыми розами и зеленью" width="520" height="693" loading="lazy" decoding="async"><span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span><figcaption>Букет с кустовыми розами и зеленью</figcaption></figure><figure class="work" tabindex="0" role="button" aria-label="Открыть фото: Фиолетовый букет с лизиантусами" data-full="assets/g/03.webp" data-cap="Фиолетовый букет с лизиантусами"><img src="assets/g/03-s.webp" alt="Фиолетовый букет с лизиантусами" width="520" height="693" loading="lazy" decoding="async"><span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span><figcaption>Фиолетовый букет с лизиантусами</figcaption></figure><figure class="work" tabindex="0" role="button" aria-label="Открыть фото: Нежный букет с эустомой" data-full="assets/g/04.webp" data-cap="Нежный букет с эустомой"><img src="assets/g/04-s.webp" alt="Нежный букет с эустомой" width="520" height="693" loading="lazy" decoding="async"><span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span><figcaption>Нежный букет с эустомой</figcaption></figure><figure class="work" tabindex="0" role="button" aria-label="Открыть фото: Пионы и альстромерии в голубой бумаге" data-full="assets/g/06.webp" data-cap="Пионы и альстромерии в голубой бумаге"><img src="assets/g/06-s.webp" alt="Пионы и альстромерии в голубой бумаге" width="520" height="693" loading="lazy" decoding="async"><span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span><figcaption>Пионы и альстромерии в голубой бумаге</figcaption></figure><figure class="work" tabindex="0" role="button" aria-label="Открыть фото: Розовый букет с хлопком" data-full="assets/g/07.webp" data-cap="Розовый букет с хлопком"><img src="assets/g/07-s.webp" alt="Розовый букет с хлопком" width="520" height="693" loading="lazy" decoding="async"><span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span><figcaption>Розовый букет с хлопком</figcaption></figure><figure class="work" tabindex="0" role="button" aria-label="Открыть фото: Пионы в кремовой бумаге" data-full="assets/g/08.webp" data-cap="Пионы в кремовой бумаге"><img src="assets/g/08-s.webp" alt="Пионы в кремовой бумаге" width="520" height="693" loading="lazy" decoding="async"><span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span><figcaption>Пионы в кремовой бумаге</figcaption></figure><figure class="work" tabindex="0" role="button" aria-label="Открыть фото: Красные розы с эустомой" data-full="assets/g/10.webp" data-cap="Красные розы с эустомой"><img src="assets/g/10-s.webp" alt="Красные розы с эустомой" width="520" height="693" loading="lazy" decoding="async"><span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span><figcaption>Красные розы с эустомой</figcaption></figure></div>
+      </div>
+    </section>
+
+    <!-- 3 · ВЫБОР: веер из цветов магазина (фирменный ход 1) -->
+    <section data-v-act="pin" data-v-span="2.4" data-v-drift="#f8f1ed" id="sborka" aria-label="Какие букеты на фото">
+      <div data-v-stage>
+        <div class="sb">
+          <div class="sb__head" data-v-cue="0 1 0 0" data-v-rise="0">
+            <span class="v-label">Из чего букеты</span>
+            <h2 class="v-display v-display--md">Розы, эустома, лизиантусы: цвет на любой повод</h2>
+          </div>
+
+          <div class="sb__rep">
+            <div data-v-cue="0 0.26 0 0.05">
+              <span class="sb__step"><i aria-hidden="true"></i>1 · Красные розы</span>
+              <h3>Глубокий цвет с белой эустомой</h3>
+              <p>Красные розы в бордовой бумаге и белая эустома. <b>Строгий букет</b>, который сразу видно издали.</p>
+            </div>
+            <div data-v-cue="0.27 0.51 0.05 0.05">
+              <span class="sb__step"><i aria-hidden="true"></i>2 · Нежные тона</span>
+              <h3>Розовый букет с хлопком</h3>
+              <p>Розовые цветы, хлопок и зелень в розовой бумаге. <b>Мягкий вариант</b> для дня рождения и просто так.</p>
+            </div>
+            <div data-v-cue="0.52 0.76 0.05 0.05">
+              <span class="sb__step"><i aria-hidden="true"></i>3 · Эустома</span>
+              <h3>Эустома и розы с зеленью</h3>
+              <p>Нежная эустома, розы и эвкалипт. <b>Воздушный букет</b> в пастельной гамме.</p>
+            </div>
+            <div data-v-cue="0.77 1 0.05 0">
+              <span class="sb__step"><i aria-hidden="true"></i>4 · Кустовые розы</span>
+              <h3>Много цветов в одной бумаге</h3>
+              <p>Розовые кустовые розы в бумаге. <b>Пышный букет</b>, который держишь двумя руками.</p>
+            </div>
+          </div>
+
+          <div class="fan" aria-hidden="true">
+            <figure class="fan__card fan__card--3"><img src="assets/g/04.webp" alt="" width="768" height="1024" decoding="async"><figcaption>Эустома · розы</figcaption></figure>
+            <figure class="fan__card fan__card--2"><img src="assets/g/07.webp" alt="" width="768" height="1024" decoding="async"><figcaption>Розовый · хлопок</figcaption></figure>
+            <figure class="fan__card fan__card--1"><img src="assets/g/10.webp" alt="" width="768" height="1024" decoding="async"><figcaption>Красные розы</figcaption></figure>
+            <figure class="fan__card fan__card--wrap"><img src="assets/g/01.webp" alt="" width="768" height="1024" decoding="async"><figcaption>Кустовые розы</figcaption></figure>
+            <p class="fan__legend">Фото с карточки магазина</p>
+          </div>
+
+          <div class="sb__after" data-v-cue="0.78 1 0.06 0">
+            <a class="v-btn" href="https://wa.me/79137922942?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%B1%D1%83%D0%BA%D0%B5%D1%82" target="_blank" rel="noopener">Заказать букет</a>
+            <span class="sb__hint">Понравился букет на фото - напишите, какой именно</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ВЫБОР: цены (иксы, цен на карточке нет) -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f2e7e2" id="ceny" aria-label="Сколько стоит">
+      <div class="v-wrap price">
+        <div class="price__head" data-v-in data-v-in-self>
+          <h2 class="v-display v-display--lg">Сколько стоит</h2>
+          <p class="v-body">Точные цены уточняйте при заказе: состав и размер зависят от повода и бюджета.</p>
+        </div>
+        <div data-v-in data-v-stagger="80">
+          <ul class="price__rows">
+            <li>
+              <h3>Кустовые розы в бумаге</h3>
+              <p>Розовый букет, как на первом фото.</p>
+              <span class="sum v-nums">Х ХХХ руб.<small>уточняйте при заказе</small></span>
+            </li>
+            <li>
+              <h3>Пионы и альстромерии</h3>
+              <p>Букет в голубой бумаге с пионами, как на фото.</p>
+              <span class="sum v-nums">Х ХХХ руб.<small>уточняйте при заказе</small></span>
+            </li>
+            <li>
+              <h3>Красные розы с эустомой</h3>
+              <p>Строгий красно-белый букет в бордовой бумаге.</p>
+              <span class="sum v-nums">Х ХХХ руб.<small>уточняйте при заказе</small></span>
+            </li>
+          </ul>
+          <ul class="price__terms">
+            <li><b>Часы работы</b><span>Ежедневно, с 9:00 до 21:00.</span></li>
+            <li><b>Адрес</b><span>Новосибирск, Нарымская ул., 19, этаж 1.</span></li>
+            <li><b>Как заказать</b><span>Написать в WhatsApp или позвонить по телефону +7 (383) 220-12-05.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · ДЕЙСТВИЕ: как заказать (фирменный ход 2: часы работы магазина) -->
+    <section data-v-act="pin" data-v-span="2" data-v-drift="#fbf6f3" id="kak" aria-label="Как заказать">
+      <div data-v-stage>
+        <div class="v-layer kc__img" data-v-parallax="-0.4">
+          <img src="assets/kc.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+        </div>
+        <div class="kc__scrim" aria-hidden="true"></div>
+        <div class="kc">
+          <div class="kc__copy">
+            <div data-v-cue="0 1 0 0" data-v-rise="0">
+              <span class="v-label">Как заказать</span>
+              <h2 class="v-display v-display--lg">Три шага до букета</h2>
+            </div>
+            <div class="kc__rep">
+              <div data-v-cue="0 0.34 0 0.06">
+                <h3>Напишите или позвоните</h3>
+                <p>WhatsApp или телефон +7 (383) 220-12-05. Магазин открыт каждый день с 9:00 до 21:00.</p>
+              </div>
+              <div data-v-cue="0.36 0.66 0.06 0.06">
+                <h3>Назовите повод и бюджет</h3>
+                <p>Для кого цветы и на какую сумму: от этого зависит состав букета.</p>
+              </div>
+              <div data-v-cue="0.68 1 0.06 0">
+                <h3>Получите букет</h3>
+                <p>Заберите в магазине на Нарымской, 19 (этаж 1). Нужна доставка - уточните при заказе.</p>
+              </div>
+            </div>
+          </div>
+          <div class="clock" aria-hidden="true">
+            <i class="clock__tick clock__tick--big" style="--deg:0deg"></i><i class="clock__tick" style="--deg:30deg"></i><i class="clock__tick" style="--deg:60deg"></i><i class="clock__tick clock__tick--big" style="--deg:90deg"></i><i class="clock__tick" style="--deg:120deg"></i><i class="clock__tick" style="--deg:150deg"></i><i class="clock__tick clock__tick--big" style="--deg:180deg"></i><i class="clock__tick" style="--deg:210deg"></i><i class="clock__tick" style="--deg:240deg"></i><i class="clock__tick clock__tick--big" style="--deg:270deg"></i><i class="clock__tick" style="--deg:300deg"></i><i class="clock__tick" style="--deg:330deg"></i>
+            <span class="clock__num clock__num--12">12</span><span class="clock__num clock__num--3">3</span><span class="clock__num clock__num--6">6</span>
+            <span class="clock__mark clock__mark--photo"><i></i></span>
+            <span class="clock__mark clock__mark--door"><i></i></span>
+            <i class="clock__hand clock__hand--h"></i>
+            <i class="clock__hand clock__hand--m"></i>
+            <i class="clock__pin"></i>
+            <p class="kc__legend">Открыто 9:00-21:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · ДОВЕРИЕ: отзывы с Яндекс.Карт -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f8f1ed" id="otzyvy" aria-label="Отзывы с Яндекс.Карт">
+      <div class="v-wrap reviews">
+        <div class="reviews__head" data-v-in data-v-stagger="60">
+          <h2 class="v-display v-display--md">Что пишут на Яндекс.Картах</h2>
+          <div class="reviews__rating">
+            <span class="reviews__num v-nums">4,9</span>
+            <span class="reviews__stars" style="--r: 4.9" role="img" aria-label="рейтинг 4,9 из 5"></span>
+            <span class="v-soft">27 отзывов, 37 оценок</span>
+            <a href="https://yandex.com/maps/org/florentina/1288488816/" target="_blank" rel="noopener">Читать все отзывы</a>
+          </div>
+        </div>
+        <ul class="reviews__list" data-v-in data-v-stagger="90">
+          <li class="reviews__item reviews__item--big">
+            <p class="reviews__text">"Хочу похвалить магазин за качество цветов. Подарили белые розы, и они стоят как новенькие уже шестой день! Для белых роз это редкость."</p>
+            <p class="reviews__meta"><b>wshsui</b> · 14 января 2026</p>
+          </li>
+          <li class="reviews__item">
+            <p class="reviews__text">"2 год подряд беру цветы только в этом магазине всегда свежие и на высоте, персонал я считаю один из лучших в Новосибирске"</p>
+            <p class="reviews__meta"><b>Матвей Гранатов</b> · 17 февраля 2026</p>
+          </li>
+        </ul>
+        <p class="reviews__fact" data-v-in data-v-in-self>Отзывы скопированы с карточки на Яндекс.Картах без правок.</p>
+      </div>
+    </section>
+
+    <!-- 7 · ДЕЙСТВИЕ -->
+    <section data-v-act="flow" data-v-drift="#f8f1ed" id="zakaz" aria-label="Заказать букет">
+      <div class="close" data-v-spotlight>
+        <div class="close__inner">
+          <div data-v-in data-v-stagger="80">
+            <h2 class="v-display v-display--lg">Назовите повод</h2>
+            <p class="v-lede">Напишите в WhatsApp, какой букет понравился на фото или для кого нужны цветы.</p>
+            <div class="close__cta">
+              <a class="v-btn" href="https://wa.me/79137922942?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%B1%D1%83%D0%BA%D0%B5%D1%82" target="_blank" rel="noopener" data-v-magnet="0.22" data-v-rise="0">Заказать букет</a>
+              <a class="close__tel" href="tel:+73832201205">+7 (383) 220-12-05</a>
+            </div>
+            <p class="close__hint">Не любите писать - звоните.</p>
+          </div>
+          <div class="close__meta" data-v-in data-v-stagger="60">
+            <span><b>Открыто</b>Ежедневно, 9:00-21:00</span>
+            <span><b>Магазин</b>Новосибирск, Нарымская ул., 19, этаж 1</span>
+          </div>
+        </div>
+        <footer class="foot">
+          <span>Флорентина · Новосибирск</span>
+          <span class="foot__more">Цветочный магазин</span>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото" hidden>
+  <div class="lb__scroll" id="lbScroll"><img class="lb__img" id="lbImg" alt=""></div>
+  <p class="lb__cap" id="lbCap"></p>
+  <button class="lb__btn lb__close" id="lbClose" type="button" aria-label="Закрыть"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  <button class="lb__btn lb__prev" id="lbPrev" type="button" aria-label="Предыдущее фото"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb__btn lb__next" id="lbNext" type="button" aria-label="Следующее фото"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  // На телефоне пины короче: data-v-span из CSS не поменять, правим атрибут до монтирования.
+  if (window.matchMedia('(max-width: 860px)').matches) {
+    document.getElementById('top').setAttribute('data-v-span', '1.6');
+    document.getElementById('sborka').setAttribute('data-v-span', '2.2');
+    document.getElementById('kak').setAttribute('data-v-span', '1.8');
+  }
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Шапка: подложка после 40 px прокрутки, чтобы текст секций не просвечивал.
+  (function () {
+    var bar = document.querySelector('.bar'), on = null;
+    function tick() { var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+
+  // Лупа: нажатие открывает фото, второе приближает, стрелки листают, крестик и Esc закрывают.
+  (function () {
+    var works = [].slice.call(document.querySelectorAll('.work'));
+    var lb = document.getElementById('lb'), sc = document.getElementById('lbScroll'), img = document.getElementById('lbImg'), cap = document.getElementById('lbCap');
+    var cur = 0, last = null;
+    function show(i) {
+      cur = (i + works.length) % works.length;
+      var w = works[cur];
+      sc.classList.remove('is-zoom'); img.src = w.dataset.full; img.alt = w.dataset.cap; cap.textContent = w.dataset.cap + ' (' + (cur + 1) + ' из ' + works.length + ')';
+    }
+    function open(i) { last = document.activeElement; show(i); lb.hidden = false; lb.classList.add('is-open'); document.documentElement.style.overflow = 'hidden'; document.getElementById('lbClose').focus(); }
+    function close() { lb.classList.remove('is-open'); lb.hidden = true; document.documentElement.style.overflow = ''; if (last) last.focus(); }
+    function zoom(e) {
+      var r = img.getBoundingClientRect(), fx = (e.clientX - r.left) / r.width, fy = (e.clientY - r.top) / r.height;
+      if (sc.classList.contains('is-zoom')) { sc.classList.remove('is-zoom'); return; }
+      sc.classList.add('is-zoom');
+      img.style.width = Math.round(r.width * 2.2) + 'px';
+      sc.scrollLeft = fx * img.offsetWidth - sc.clientWidth / 2 + 16;
+      sc.scrollTop = fy * img.offsetHeight - sc.clientHeight / 2 + 56;
+    }
+    img.addEventListener('click', zoom);
+    sc.addEventListener('transitionend', function () {});
+    new MutationObserver(function () { if (!sc.classList.contains('is-zoom')) img.style.width = ''; }).observe(sc, { attributes: true, attributeFilter: ['class'] });
+    works.forEach(function (w, i) {
+      w.addEventListener('click', function () { open(i); });
+      w.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); } });
+    });
+    document.getElementById('lbClose').addEventListener('click', close);
+    document.getElementById('lbPrev').addEventListener('click', function () { show(cur - 1); });
+    document.getElementById('lbNext').addEventListener('click', function () { show(cur + 1); });
+    sc.addEventListener('click', function (e) { if (e.target === sc) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (lb.hidden) return;
+      if (e.key === 'Escape') close(); else if (e.key === 'ArrowLeft') show(cur - 1); else if (e.key === 'ArrowRight') show(cur + 1);
+    });
+  })();
+  // Фирменные ходы (веер карточек в #sborka и часы в #kak) ведёт CSS от --v-p акта, скрипта им не нужно.
+</script>
+</body>
+</html>
